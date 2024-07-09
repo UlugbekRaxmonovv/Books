@@ -22,7 +22,7 @@ const Navbar = ({name,setName}) => {
     const handleClose = () => {
       setAnchorEl(null);
       localStorage.removeItem('x-auth-token');
-      navigate('/login')
+      navigate('/')
     };
 
     const { data} = useGetMyselfQuery({q:""});
