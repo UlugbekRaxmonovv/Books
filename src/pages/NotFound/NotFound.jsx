@@ -18,7 +18,7 @@ const NotFound = () => {
     <p>Go Home Page</p>
     </div>
 </Link>
-  <button className="notfound_btn2" onClick={() => navigate(-1)}>
+  <button className="notfound_btn2" onClick={() => navigate(1)}>
   <div >
     <p>Reload Page</p>
     </div>
