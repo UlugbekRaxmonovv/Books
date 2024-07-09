@@ -12,13 +12,12 @@ const App = () => {
     <>
     <ToastContainer/>
     <Routes>
-      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Login />} />
       <Route path="/signup" element={<SignUp />}/>
       <Route path="/"  element={<Auth />}>
       <Route path='/home' element={<Book1 />} />
       </Route>
       <Route path="*" element={<NotFound />} />
-     
     </Routes>
     </>
   );
