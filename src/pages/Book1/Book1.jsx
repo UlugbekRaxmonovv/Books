@@ -26,7 +26,7 @@ const Book1 = () => {
     const [error, setError] = useState(null);
     const [modul, setModul] = useState(false);
     const [itemsPerPage, setItemsPerPage] = useState(Number(localStorage.getItem("pages")) || 3);
-
+    const [name,setName] = useState("")
     const handlePageChange = (event, value) => {
         setPage(value);
     };
@@ -38,7 +38,9 @@ const Book1 = () => {
         toast.success("Product deleted successfully");
         
       }
-    let links =paginatedData?.map((links) =>(
+    let links =paginatedData?.filter((item) => 
+    item.title.toLowerCase().includes(name.toLowerCase())
+).map((links) =>(
         <div className="wrapeer" key={links.id}>
         <div className="card">
          <div className="card_item">
@@ -92,11 +94,11 @@ const Book1 = () => {
   
     return (
         <div className="books1">
-        <Navbar />
+        <Navbar name={name}  setName={setName} />
         <div className="book container">
             <div className="book_all">
             <div className="book_row">
-                <h1>You’ve got <span> 7 book </span> </h1>
+                <h1>You’ve got <span> {myselfData?.length} book </span> </h1>
             </div>
              <div className="book_btn" onClick={() =>setModul(true)}>
              <div className="book_btn1">
@@ -127,7 +129,7 @@ const Book1 = () => {
 
   
           
-             <Box sx={{display:'flex',justifyContent:'center', p:'25px',marginLeft:'20%'}}>
+             <Box sx={{display:'flex',justifyContent:'center', p:'25px'}}>
               <div className='paj'>
               <Pagination  count={Math.ceil(myselfData?.length / itemsPerPage)}  variant="outlined" page={page}  onChange={handlePageChange}  />
               </div>

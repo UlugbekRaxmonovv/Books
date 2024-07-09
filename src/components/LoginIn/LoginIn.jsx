@@ -22,7 +22,7 @@ export default function FormPropsTextFields() {
       (product) => product.name === name && product.password === password
     );
     if (isLogin) {
-      navigate('/book1');
+      navigate('/home');
       toast.success("Welcome");
       dispatch(setToken("token123"));
     } else {

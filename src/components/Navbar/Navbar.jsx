@@ -7,8 +7,24 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Search from '../Search/Search';
 import { useGetMyselfQuery } from '../context/api/productApi';
-const Navbar = () => {
-    const [name,setName] = useState("")
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Fade from '@mui/material/Fade';
+import { useNavigate } from 'react-router-dom';
+const Navbar = ({name,setName}) => {
+  const navigate = useNavigate();
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+      localStorage.removeItem('x-auth-token');
+      navigate('/login')
+    };
+
     const { data} = useGetMyselfQuery({q:""});
   
     const filteredList = data?.filter(prop => prop.title.toLowerCase().includes(name.toLowerCase()));
@@ -54,12 +70,33 @@ const Navbar = () => {
                 </div>
 
                 <ul  className='ul_list'>
-                    <span className='span_r'>*</span>
+                    <span className='span_r'></span>
                     <li>
                     <IoNotificationsOutline />
                     </li>
                     <li>
-                     <img src={rasm1} alt="" />
+                    <Button
+                  
+        id="fade-button"
+        aria-controls={open ? 'fade-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+      <img src={rasm1} alt="" />
+      </Button>
+      <Menu
+        id="fade-menu"
+        MenuListProps={{
+          'aria-labelledby': 'fade-button',
+        }}
+      
+        anchorEl={anchorEl}
+        open={open}
+        TransitionComponent={Fade}
+      >
+        <MenuItem  onClick={handleClose}>Logout</MenuItem>
+      </Menu>
                     </li>
                 </ul>
                 </nav>

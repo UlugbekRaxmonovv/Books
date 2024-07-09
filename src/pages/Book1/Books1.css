@@ -6,6 +6,7 @@ body{
 }
 
 .book_all{
+    /* position: relative; */
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -48,8 +49,6 @@ height: 40px;
 padding: 10px 24px 10px 24px;
 border-radius: 4px;
 background: #6200EE;
-position: absolute;
-left: 81%;
 cursor: pointer;
 }
 .book_btn1{
