@@ -87,7 +87,7 @@ export default function FormPropsTextFields() {
                 autoComplete="current-password"
               />
               <Button variant="contained" type="submit" className="btn" disabled={isLoading}>Submit</Button>
-              <p className="p">Already signed up? <Link to={'/'}>Go to sign in</Link></p>
+              <p className="p">Already signed up? <Link to={'/login'}>Go to sign in</Link></p>
             </div>
           </Box>
         </form>
