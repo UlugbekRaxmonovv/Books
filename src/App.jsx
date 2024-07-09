@@ -17,7 +17,7 @@ const App = () => {
        <Route path="home" element={<Book1 />} />
         </Route>
       <Route path="/"  element={<Auth />}>
-      <Route path="/home" element={<Book1 />} />
+      <Route index element={<Book1 />} />
       </Route>
       <Route path="*" element={<NotFound />} />
      
