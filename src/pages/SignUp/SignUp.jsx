@@ -11,7 +11,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 const validationSchema = Yup.object({
   password: Yup.string()
-    .min(6, "Password should be of minimum 6 characters length")
+    .min(8, "Password should be of minimum 8 characters length")
 });
 
 export default function FormPropsTextFields() {
