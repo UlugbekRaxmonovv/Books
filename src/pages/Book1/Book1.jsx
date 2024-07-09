@@ -13,6 +13,8 @@ import { Box, Skeleton } from '@mui/material';
 import { toast } from 'react-toastify';
 import CreateABook from '../../components/CreateABook/CreateABook';
 import { useDeleteProductMutation } from '../../components/context/api/productApi';
+import Book from '../../components/Book/Book';
+import BookNow from '../../components/BookNow/BookNow';
 
 const Book1 = () => {
     const { data: myselfData,isFetching } = useGetMyselfQuery();
@@ -20,6 +22,8 @@ const Book1 = () => {
     const [islogin, setIsLogin] = useState(false);
     document.body.style.overflow =  islogin ? "hidden" : "auto"
     const [page, setPage] = useState(1);
+    const [book, setBook] = useState(null);
+    const [error, setError] = useState(null);
     const [modul, setModul] = useState(false);
     const [itemsPerPage, setItemsPerPage] = useState(Number(localStorage.getItem("pages")) || 3);
 
@@ -64,6 +68,27 @@ const Book1 = () => {
         </div>
     </div>
     )) 
+
+
+  
+    const fetchBook = async (isbn) => {
+      try {
+        const response = await fetch(`https://668a2d012c68eaf3211c1da9.mockapi.io/myself?search=${isbn}`);
+        const data = await response.json();
+        
+        if (data && data.length > 0) {
+          console.log(data);  
+          setBook(data[0]); 
+          setError(null);
+        } else {
+          setBook(null);
+          setError('Book not found');
+        }
+      } catch (err) {
+        setError(err.message);
+        setBook(null);
+      }
+    };
   
     return (
         <div className="books1">
@@ -99,13 +124,20 @@ const Book1 = () => {
                         </div>
                     }
            
+
+  
           
              <Box sx={{display:'flex',justifyContent:'center', p:'25px',marginLeft:'20%'}}>
               <div className='paj'>
               <Pagination  count={Math.ceil(myselfData?.length / itemsPerPage)}  variant="outlined" page={page}  onChange={handlePageChange}  />
               </div>
              </Box>
-
+          {
+            book ?  <Book book={book} />
+            :
+            <BookNow/>
+          }
+      
     {
         islogin ?    <Modul  btn1={setIsLogin}  >
     <Edit islogin={islogin}  setIsLogin={setIsLogin}  />
@@ -117,7 +149,7 @@ const Book1 = () => {
 
       {
         modul ?    <Modul  btn1={setModul}   width='430px' height='237px'>
-      <CreateABook  btn1={setModul}/>
+      <CreateABook  btn1={setModul} onSearch={fetchBook} />
          </Modul>
          :
          <></>

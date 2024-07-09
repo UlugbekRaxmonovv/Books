@@ -20,6 +20,7 @@ const App = () => {
       <Route path="/book1" element={<Book1 />} />
       </Route>
       <Route path="*" element={<NotFound />} />
+     
     </Routes>
     </>
   );

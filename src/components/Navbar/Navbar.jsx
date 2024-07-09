@@ -12,7 +12,6 @@ const Navbar = () => {
     const { data} = useGetMyselfQuery({q:""});
   
     const filteredList = data?.filter(prop => prop.title.toLowerCase().includes(name.toLowerCase()));
-    console.log(filteredList);
     return (
         <div>   
             <header>

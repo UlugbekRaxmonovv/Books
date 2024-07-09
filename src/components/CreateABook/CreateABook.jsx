@@ -4,8 +4,13 @@ import { RiLinkM } from "react-icons/ri";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
 
-const CreateABook = ({btn1}) => {
+const CreateABook = ({btn1,onSearch}) => {
     const [isbn, setIsbn] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSearch(isbn);
+      };
     return (
         <div className='CreateABook'>
             <div className="CreateABook_book">
@@ -14,7 +19,8 @@ const CreateABook = ({btn1}) => {
                 </div>
                 <IoIosCloseCircleOutline onClick={() =>btn1(false)}/>
             </div>
-            <div className="isbn">
+           <form action="" onSubmit={handleSubmit}>
+           <div className="isbn">
                 <h1>ISBN</h1>
                 <div className="isbn_input">
 <div className="isbn_input_all">
@@ -38,6 +44,8 @@ type="text" />
         <button>Submit</button>
     </div>
 </div>
+
+           </form>
             
         </div>
     );

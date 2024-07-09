@@ -15,7 +15,6 @@ export default function FormPropsTextFields() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { data: products } = useGetProductsQuery();
-  console.log(products);
 
   const handleSubmit = (e) => {
     e.preventDefault();
