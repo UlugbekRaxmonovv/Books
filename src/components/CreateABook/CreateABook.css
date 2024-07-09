@@ -1,0 +1,108 @@
+.CreateABook{
+    padding: 0px 20px;
+    margin-top: -40px;
+}
+.CreateABook_book{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.CreateABook_row{
+    display: flex;
+    align-items: center;
+}
+.CreateABook_row h1{
+    font-family: Mulish;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25.1px;
+    text-align: left;
+    color: #151515;
+    
+}
+.CreateABook_book svg{
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.isbn h1{
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    color: #151515;
+    margin-top: 22px;
+    
+}
+.isbn_input{
+    width:330px;
+    height: 47px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 32px 0px #3333330A;
+
+    
+}
+.isbn_input_all{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 16px;
+    margin-top: 20px;
+}
+.isbn_input_all_row svg{
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.isbn_input_all_row input{
+    border: none;
+    margin-top: 10px;
+    height: 20px;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+.CreateABook_allButton{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+.CreateABook_bnt button{
+    width: 155px;
+    height:40px;
+    padding: 10px 24px 10px 24px;
+    border-radius: 4px;
+    border: 1px solid #6200EE;
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.08px;
+   text-align: center;
+   color: #6200EE;
+   background-color:white;
+   cursor: pointer;
+
+    
+}
+.CreateABook_bnt button:active{
+    transform: scale(1.02);
+}
+.CreateABook_bnt1 button:active{
+    transform: scale(1.02);
+}
+.CreateABook_bnt1 button{
+    width: 155px;
+    height:40px;
+    padding: 10px 24px 10px 24px;
+    border-radius: 4px;
+    background-color:  #6200EE;
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.08px;
+     text-align: center;
+     color: #fff;
+     border: none;
+     cursor: pointer;
+}

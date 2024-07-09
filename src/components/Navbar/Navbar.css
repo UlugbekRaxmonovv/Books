@@ -1,0 +1,128 @@
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 12px 20px;
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+}
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.img_all p{
+    font-family: Mulish;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+    letter-spacing: 0.032em;
+    text-align: left;
+    color: #FFFFFF;
+
+    
+}
+.img_all p  span{
+    color: #6200EE;
+
+}
+.input_rows{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 48px;
+    gap: 10px;
+
+
+}
+
+.input_s svg{
+    font-size: 24px;
+    color: white;
+}
+.input_s input{
+    background-color: #333333;
+    border: none;
+    margin-top: 0px;
+    color: #FEFEFE;
+    width: 300px;
+    height: 40px;
+    padding: 0 10px;
+}
+.span_lr{
+    position: absolute;
+    left: 20%;
+    width: 300px;
+    height: 100px;
+    background-color: white;
+    border-radius: 0 0 4px 4px;
+    margin-top: -6;
+    overflow: auto;
+}
+.span_lr   h1{
+    padding: 0px 10px;
+    font-size: 35px;
+    font-family: Mulish;
+font-size: 20px;
+font-weight: 600;
+text-align: left;
+
+}
+.input_s input::placeholder{
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.08px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #FEFEFE;
+}
+.input_s input:focus{
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+.input_s input:focus{
+    background-color: white;
+    color: black;
+}
+.ul_list{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+     position: absolute;
+     left: 110%;
+}
+.ul_list .span_r{
+    position: absolute;
+    top: 2%;
+    left: 26%;
+    font-family: Mulish;
+    color: red;
+    max-width: 32px;
+    height: 32px;
+    width: 100%;
+}
+.ul_list li img{
+    object-fit: contain;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+.ul_list li svg{
+    font-size: 32px;
+    object-fit: contain;
+    cursor: pointer;
+}

@@ -1,0 +1,211 @@
+*{
+    font-family: "Mulish", sans-serif !important;
+}
+body{
+    background-color: #F8F8F8;
+}
+.books1{
+    background-image: url('../../assets/img/book1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    width: 80%;
+    height: 100vh;
+}
+.book_all{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.css-wjh20t-MuiPagination-ul li button{
+   color: blue;
+   border: 1px solid blue;
+}
+.book h1{
+    font-family: Mulish;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25.1px;
+    text-align: left;
+    color: #FEFEFE;
+    margin-top: 20px;
+    
+}
+.book_row h1{
+    font-family: Mulish;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45.18px;
+    text-align: left;
+    color: #FEFEFE;
+    
+}
+.book_row h1 span{
+    color: #6200EE;
+
+}
+.book_btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    width:181px;
+height: 40px;
+padding: 10px 24px 10px 24px;
+border-radius: 4px;
+background: #6200EE;
+position: absolute;
+left: 81%;
+cursor: pointer;
+}
+.book_btn1{
+    display: flex;
+    align-items: center;
+}
+.book_btn1 svg{
+    font-size: 15px;
+    color: #FEFEFE;
+}
+.book_btn1 p{
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.08px;
+    text-align: left;
+    color: #FEFEFE;
+    
+}
+.wrapeer_all{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 32px 0;
+    gap: 5px;
+    position: relative;
+    /* flex-wrap: wrap; */
+}
+.wrapeer{
+    display: flex;
+    align-items: center;
+}
+.wrapeer:hover{
+    .delet{
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+.delet{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    gap: 5px;
+    margin-top: -20%;
+    opacity: 0;
+    /* margin-left: 15px; */
+    transition: all .15s linear
+  
+}
+.delet_al{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 8px 0px;
+    border-radius: 6px 6px 6px 0px;
+    background: #FF4D4F;
+    cursor: pointer;
+    
+}
+
+.delet_als svg{
+    font-size: 15px;
+    color: #FEFEFE;
+}
+.delet_al svg{
+    font-size: 15px;
+    color: #FEFEFE;
+}
+
+.delet_als{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 8px 0px;
+    border-radius: 0px 6px 6px 6px;
+    background: #6200EE;
+    cursor: pointer;
+
+    
+}
+.card{
+    width: 397.33px;
+    height: 214px;
+    border-radius: 12px;
+    border: 1px solid #EBEBEB;
+    box-shadow: 0px 4px 24px 0px #33333314;
+    background: #FEFEFE;
+    cursor: pointer;
+
+    
+}
+.card_item{
+    padding: 10px 30px;
+    
+}
+
+.card_item h1{
+    font-family: Montserrat;
+font-size: 16px;
+font-weight: 600;
+line-height: 19.5px;
+text-align: left;
+color: #151515;
+
+}
+.card_item p{
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    color: #333333;
+    height: 16spx;
+    
+}
+.new{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.new_all h3{
+    color: #333333;
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: left;
+    
+}
+.new button{
+    max-width: 100px;
+    width: 100%;
+    height: 30px;
+    padding: 2px 12px 2px 12px;
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.08px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    
+    
+    
+}

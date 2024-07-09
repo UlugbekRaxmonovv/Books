@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets//img/book1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    width: 80%;
+    height: 100vh;
+}
+.hammasi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    margin-left: 30%;
+    background-color: white;
+    width: 430px;
+    height: 430px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 32px 0px #3333330A;
+
+}
+form h1{
+    text-align: center;
+    
+    font-family: Mulish;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45.18px;
+    color: #151515;
+   margin-top: -50px;
+    
+}
+form .box{
+ 
+    margin-top: 5% !important;
+}
+.input{
+    width:   350px !important;
+    height: 50px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 16px;
+    font-family: Mulish;
+    font-weight: 400;
+    color: #151515;
+    margin-left: 9% !important;
+    margin-bottom: 20px !important;
+}
+.btn{
+    width:   350px !important;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 16px;
+    font-family: Mulish;
+    font-weight: 400;
+    color: #151515;
+    margin-left: 9% !important;
+    margin-top: 20px !important;
+}
+.p{
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16.8px;
+    text-align: center;
+    margin-top: 20px !important;
+    
+}
+.p a{
+    text-decoration: none;
+    color: #1B28BC;
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16.8px;
+    text-align: center;
+    
+}
